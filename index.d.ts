@@ -32,7 +32,7 @@ export class AxiosHeaders {
 
   clear(matcher?: AxiosHeaderMatcher): boolean;
 
-  normalize(format: boolean): AxiosHeaders;
+  normalize(format?: boolean): AxiosHeaders;
 
   concat(...targets: Array<AxiosHeaders | RawAxiosHeaders | string | undefined | null>): AxiosHeaders;
 
@@ -355,6 +355,7 @@ export interface AxiosRequestConfig<D = any> {
   insecureHTTPParser?: boolean;
   env?: {
     FormData?: new (...args: any[]) => object;
+    Blob?: new (...args: any[]) => object;
   };
   formSerializer?: FormSerializerOptions;
   family?: AddressFamily;

@@ -1,9 +1,27 @@
 {
   "compilerOptions": {
-    "module": "node16",
+    "target": "es2015",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
     "lib": ["dom", "es2015"],
-    "types": [],
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./",
     "strict": true,
-    "noEmit": true
-  }
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  },
+  "include": [
+    "lib/**/*",
+    "index.ts",
+    "test/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
